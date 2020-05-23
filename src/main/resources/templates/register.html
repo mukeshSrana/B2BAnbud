@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"/>
+  <title>B2B Anbud Manager</title>
+</head>
+<body>
+<div align="center">
+  <h1>B2B Anbud</h1>
+</div>
+<div align="center">
+  <h1>Register bedrift</h1>
+  <br />
+  <form action="#" th:action="@{/save}" th:object="${bedrift}"
+        method="post">
+
+    <table border="0" cellpadding="10">
+      <tr>
+        <td>Navn:</td>
+        <td><input type="text" th:field="*{navn}" /></td>
+      </tr>
+      <tr>
+        <td>Organisasjonsnummer:</td>
+        <td><input type="text" th:field="*{organisasjonsnummer}" /></td>
+      </tr>
+      <tr>
+        <td>Kontakt person:</td>
+        <td><input type="text" th:field="*{kontaktPerson}" /></td>
+      </tr>
+      <tr>
+        <td>Mobil:</td>
+        <td><input type="text" th:field="*{mobil}" /></td>
+      </tr>
+      <tr>
+        <td>Epost:</td>
+        <td><input type="text" th:field="*{epost}" /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button type="submit">Register meg</button> </td>
+      </tr>
+    </table>
+  </form>
+</div>
+</body>
+</html>
