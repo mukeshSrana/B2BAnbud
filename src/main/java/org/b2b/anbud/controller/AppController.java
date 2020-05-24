@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@Controller
+//@Controller
 public class AppController {
 
     @Autowired
@@ -37,7 +37,6 @@ public class AppController {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String saveProduct(@ModelAttribute("bedrift") Bedrift bedrift) {
         registerService.save(bedrift);
-
         return "redirect:/";
     }
 
